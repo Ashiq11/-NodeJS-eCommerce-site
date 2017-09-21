@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Online Shop - Cart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="wrap">
+  <div class="header">
+    <div class="logo"><img src="images/logo.gif" alt="" border="0" /></div>
+    <div id="menu">
+      <ul>
+        <li><a href="profile">Profile</a></li>
+        <li class="selected"><a href="product">Products</a></li>
+        <li><a href="Sell">Sells</a></li>
+        <!--li><a href="category">Categories</a></li>
+        <li><a href="customer">Customers</a></li-->
+        <li><a href="myaccount">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="center_content">
+      <div class="title">Highest Sold Products</div>
+      <div class="feat_prod_box_details">
+        <table class="cart_table" border="1">
+          <tr class="cart_title">
+            <td>Product name</td>
+            <td>Category name</td>
+            <td>Price</td>
+            <td>Discount</td>
+            <td>Special</td>
+            <td>Details</td>
+            <td>Stock</td>
+            <td>Options</td>
+          </tr>
+          <%for(var i=0; i<products.length; i++){%>
+          <tr>
+            <td><%=products[i].productname%></td>
+            <td><%=products[i].categoryname%></td>
+            <td><%=products[i].price%></td>
+            <td><%=products[i].discount%></td>
+            <td><%=products[i].special%></td>
+            <td><%=products[i].productdetails%></td>
+            <td><%=products[i].stock%></td>
+            <td><a href="/product/edit/<%= products[i].productid %>">Edit</a> | <a href="/product/delete/<%= products[i].productid %>">Delete</a></td>
+          </tr>
+          <%}%>
+        </table>
+        </div>
+      <div class="clear"></div>
+  </div>
+  <!--end of center content-->
+  <div class="footer">
+    <div class="left_footer"><img src="images/footer_logo.gif" alt="" /></div>
+    <div class="right_footer"> <a href="home">home</a> <a href="about">about us</a> <a href="about">services</a> <a href="about">privacy policy</a> <a href="contact">contact us</a> </div>
+  </div>
+</div>
+</body>
+</html>

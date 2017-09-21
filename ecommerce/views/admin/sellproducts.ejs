@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Online Shop - Cart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="wrap">
+  <div class="header">
+    <div class="logo"><img src="images/logo.gif" alt="" border="0" /></div>
+    <div id="menu">
+      <ul>
+        <li><a href="profile">Profile</a></li>
+        <li><a href="product">Products</a></li>
+        <li class="selected"><a href="Sell">Sells</a></li>
+        <!--li><a href="category">Categories</a></li>
+        <li><a href="customer">Customers</a></li-->
+        <li><a href="myaccount">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="center_content">
+      <div class="title">Selling Records</div>
+      <div class="feat_prod_box_details">
+        <table class="cart_table" border="1">
+          <tr class="cart_title">
+            <td>Customer name</td>
+            <td>Product name</td>
+            <td>Category name</td>
+            <td>Price</td>
+            <td>Stock</td>
+            <td>Sold unit</td>
+            <td>Sold price</td>
+          </tr>
+          <%for(var i=0; i<records.length; i++){%>
+          <tr>
+            <td><%=records[i].username%></td>
+            <td><%=records[i].productname%></td>
+            <td><%=records[i].categoryname%></td>
+            <td><%=records[i].price%></td>
+            <td><%=records[i].stock%></td>
+            <td><%=records[i].unitsold%></td>
+            <td><%=records[i].sellingprice%></td>
+          </tr>
+          <%}%>
+        </table>
+        </div>
+      <div class="clear"></div>
+  </div>
+  <!--end of center content-->
+  <div class="footer">
+    <div class="left_footer"><img src="images/footer_logo.gif" alt="" /></div>
+    <div class="right_footer"> <a href="home">home</a> <a href="about">about us</a> <a href="about">services</a> <a href="about">privacy policy</a> <a href="contact">contact us</a> </div>
+  </div>
+</div>
+</body>
+</html>

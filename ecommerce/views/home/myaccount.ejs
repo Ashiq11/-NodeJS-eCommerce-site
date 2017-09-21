@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Online Shop - My Account</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="wrap">
+  <div class="header">
+    <div class="logo"><img src="images/logo.gif" alt="" border="0" /></div>
+    <div id="menu">
+      <ul>
+        <li><a href="home">home</a></li>
+        <li><a href="about">about us</a></li>
+        <li><a href="new">new products</a></li>
+        <li><a href="specials">specials</a></li>
+        <li><a href="register">register</a></li>
+        <li class="selected"><a href="myaccount">Sign in</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="center_content">
+    <div class="left_content">
+      <div class="title">Sign in</div>
+      <div class="feat_prod_box_details">
+        <p class="details"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. </p>
+        <div class="contact_form">
+          <div class="form_subtitle">login into your account</div>
+          <form name="register" method="post">
+            <div class="form_row">
+              <label class="contact"><strong>Username:</strong></label>
+              <input type="text" class="contact_input" name="username" />
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Password:</strong></label>
+              <input type="password" class="contact_input" name="password" />
+            </div>
+            <div class="form_row">
+              <input type="submit" class="register" value="login" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <!--end of left content-->
+    <div class="right_content">
+      <div class="cart">
+        <div class="title"><span class="title_icon"><img src="images/cart.gif" alt="" /></span>My cart</div>
+        <a href="cart" class="view_cart">view cart</a> </div>
+      <div class="title">About Our Shop</div>
+      <div class="about">
+        <p> <img src="images/about.gif" alt="" class="right" /> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. </p>
+      </div>
+      <div class="right_box">
+        <div class="title">Promotions</div>
+        <% for(var i = 0; i < promotion.length; i++) {%>
+        <div class="new_prod_box"> <a href="details/<%=promotion[i].productid%>"><%=promotion[i].productname%></a>
+          <div class="new_prod_bg"> <span class="new_icon"><img src="images/promo_icon.gif" alt="" /></span> <a href="details/<%=promotion[i].productid%>"><img src="thumb/<%=promotion[i].source%>" alt="" class="thumb" border="0" /></a> </div>
+        </div>
+        <%}%>
+      </div>
+      <div class="right_box">
+        <div class="title">Categories</div>
+        <ul class="list">
+          <%for(var i = 0; i < categories.length; i++){%>
+          <li><a href="category/<%=categories[i]%>"><%=categories[i]%></a></li>
+          <%}%>
+        </ul>
+      </div>
+    </div>
+    <!--end of right content-->
+    <div class="clear"></div>
+  </div>
+  <!--end of center content-->
+  <div class="footer">
+    <div class="left_footer"><img src="images/footer_logo.gif" alt="" /></div>
+    <div class="right_footer"> <a href="home">home</a> <a href="about">about us</a> <a href="about">services</a> <a href="about">privacy policy</a> <a href="contact">contact us</a> </div>
+  </div>
+</div>
+</body>
+</html>

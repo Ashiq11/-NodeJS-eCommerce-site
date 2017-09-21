@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Online Shop - Register</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="wrap">
+  <div class="header">
+    <div class="logo"><img src="images/logo.gif" alt="" border="0" /></div>
+    <div id="menu">
+      <ul>
+        <li><a href="profile">Profile</a></li>
+        <li><a href="product">Products</a></li>
+        <!--li><a href="Sell">Sells</a></li>
+        <li><a href="category">Categories</a></li>
+        <li><a href="customer">Customers</a></li-->
+        <li><a href="myaccount">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="center_content">
+    
+      <div class="title">Edit</div>
+      <div class="feat_prod_box_details">
+        <p class="details"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. </p>
+        <div class="contact_form">
+          <div class="form_subtitle">edit account</div>
+          <form name="register" method="post">
+            <input type="hidden" name="productid" value="<%= product.productid %>">
+            <div class="form_row">
+              <label class="contact"><strong>Product name:</strong></label>
+              <input type="text" class="contact_input" name="productname" value="<%=product.productname%>" />
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Category:</strong></label>
+              <select name="category">
+                <%for(var i=0; i<categories.length; i++){
+                if(categories[i].categoryid==product.categoryid){ %>
+                  <option value="<%=categories[i].categoryid%>" selected><%=categories[i].categoryname%></option>
+                <% } else { %>
+                <option value="<%=categories[i].categoryid%>"><%=categories[i].categoryname%></option>
+                <% } }%>
+              </select>
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Company:</strong></label>
+              <input type="text" class="contact_input" name="companyname" value="<%=product.companyname%>" />
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Price:</strong></label>
+              <input type="text" class="contact_input" name="price" value="<%=product.price%>" />
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Discount:</strong></label>
+              <input type="text" class="contact_input" name="discount" value="<%=product.discount%>" />
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Special:</strong></label>
+              <select name="special">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Details:</strong></label>
+              <input type="text" class="contact_input" name="productdetails" value="<%=product.productdetails%>" />
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Stock:</strong></label>
+              <input type="text" class="contact_input" name="stock" value="<%=product.stock%>" />
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Image:</strong></label>
+              <input type="file" class="contact_input" name="source" />
+            </div>
+            <div class="form_row">
+              <input type="submit" class="register" value="Update" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="clear"></div>
+  </div>
+  <!--end of center content-->
+  <div class="footer">
+    <div class="left_footer"><img src="images/footer_logo.gif" alt="" /></div>
+    <div class="right_footer"> <a href="home">home</a> <a href="about">about us</a> <a href="about">services</a> <a href="about">privacy policy</a> <a href="contact">contact us</a> </div>
+  </div>
+</div>
+</body>
+</html>

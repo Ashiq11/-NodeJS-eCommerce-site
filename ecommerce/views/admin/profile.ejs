@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Online Shop - Register</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="wrap">
+  <div class="header">
+    <div class="logo"><img src="images/logo.gif" alt="" border="0" /></div>
+    <div id="menu">
+      <ul>
+        <li class="selected"><a href="profile">Profile</a></li>
+        <li><a href="product">Products</a></li>
+        <li><a href="Sell">Sells</a></li>
+        <!--li><a href="category">Categories</a></li>
+        <li><a href="customer">Customers</a></li-->
+        <li><a href="myaccount">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="center_content">
+      <div class="title">Profile</div>
+      <div class="feat_prod_box_details">
+        <p class="details"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. </p>
+        <div class="contact_form">
+          <div class="form_subtitle">my account</div>
+          <form name="register">
+            <div class="form_row">
+              <label class="contact"><strong>Username:</strong></label>
+              <label class="contact"><strong><%=user.username%></strong></label>
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Password:</strong></label>
+              <label class="contact"><strong><%=user.password%></strong></label>
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Name:</strong></label>
+              <label class="contact"><strong><%=user.name%></strong></label>
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Phone:</strong></label>
+              <label class="contact"><strong><%=user.contact%></strong></label>
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>email:</strong></label>
+              <label class="contact"><strong><%=user.email%></strong></label>
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Adrres:</strong></label>
+              <label class="contact"><strong><%=user.address%></strong></label>
+            </div>
+            <div class="form_row">
+              <a href="register" class="continue">Edit</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="clear"></div>
+  </div>
+  <!--end of center content-->
+  <div class="footer">
+    <div class="left_footer"><img src="images/footer_logo.gif" alt="" /></div>
+    <div class="right_footer"> <a href="home">home</a> <a href="about">about us</a> <a href="about">services</a> <a href="about">privacy policy</a> <a href="contact">contact us</a> </div>
+  </div>
+</div>
+</body>
+</html>
